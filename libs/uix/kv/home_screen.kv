@@ -1,0 +1,212 @@
+#: import os os
+
+
+<HomeScreen>
+
+    MDBoxLayout:
+        orientation: "vertical"
+
+        MDToolbar:
+            title: "Mornach Drone"
+
+        ScrollView:
+            MDBoxLayout:
+                size_hint_y: None
+                height: self.minimum_height
+                # start your code from here
+                orientation: "vertical"
+                spacing: 20
+                padding: 20
+                MDCard:
+                    size_hint_y: None
+                    orientation: "vertical"
+                    height: dp(300)
+                    radius: dp(20)
+                    padding: dp(10)
+                    MDLabel:
+                        text: "Live"
+                        halign: "center"
+                        font_size: 70
+                        font_name: os.path.join('assets', 'fonts', 'Coburn.ttf')
+                        opposite_colors: True
+                    Image:
+                        size_hint_y: None
+                        height: dp(200)
+                        source: os.path.join('assets','images','drone1.png')
+                    MDFloatingActionButton:
+                        icon: "android"
+                        md_bg_color: app.theme_cls.primary_color
+
+                    
+
+
+                
+                
+                MDCard:
+                    size_hint_y: None
+                    height: dp(300)
+                    radius: dp(20)
+                    padding: dp(10)
+                    orientation: "vertical"
+                    MDLabel:
+                        text: "Record"
+                        halign: "center"
+                        font_size: 70
+                        font_name: os.path.join('assets', 'fonts', 'Coburn.ttf')
+                        opposite_colors: True
+                    
+                    Image:
+                        size_hint_y: None
+                        height: dp(200)
+                        source: os.path.join('assets','images','militray.png')
+                    MDRoundFlatIconButton:
+                        icon: "android"
+                        text: "view Data"
+                        elevation: 15
+                        v_align: "center"
+                        pos_hint: {"center_x": .5, "center_y": .5}
+
+
+                    
+
+
+
+
+
+                MDCard:
+                    size_hint_y: None
+                    height: dp(400)
+                    radius: dp(20)
+                    padding: dp(10)
+                    orientation: "vertical"
+
+
+                    MDLabel:
+                        text: "Demo"
+                        halign: "center"
+                        bold:True
+                        font_size: 70
+                        font_name: os.path.join('assets', 'fonts', 'Coburn.ttf')
+                        opposite_colors: True
+                
+                    
+                    BoxLayout:
+                        size_hint_y: None
+                        height: 20
+                    Image:
+                        size_hint_y: None
+                        height: dp(200)
+                        source: os.path.join('assets','images','drone2.png')
+                    
+                    MDLabel:
+                        text: "this is the demo of app that how it works on real life "
+                        font_style: "Body2"
+                        font_size: 25
+                        font_name: os.path.join('assets', 'fonts', 'golden.ttf')
+                        halign: "center"
+                    
+                    BoxLayout:
+                        
+
+                    MDFloatingActionButton:
+                        icon: "arrow-right"
+                        md_bg_color: app.theme_cls.primary_color
+
+                    
+
+
+
+
+                MDBoxLayout:
+                    size_hint_y: None
+                    height: dp(800)
+                    spacing: dp(20)
+                    padding: dp(10)
+                    md_bg_color: app.theme_cls.primary_color
+                    orientation: "vertical"
+
+
+                    MDCard:
+                        radius: dp(20)
+                        size_hint_y: None
+                        height: self.width/2
+                        elevation: 20
+                        Video:
+                            source: "path_to_video"
+
+                    MDRaisedButton:
+                        text: "Capture photo"
+                        pos_hint: {"center_x": .5, "center_y": .5}
+                        md_bg_color: [1,0.93,0.196,1]
+                        elevation: 20
+
+                    MDBoxLayout:
+                        size_hint_y: None
+                        height: 20
+                        MDIcon:
+                            icon: 'quadcopter'
+                            color: [1,0.93,0.196,1]
+                        MDIcon:
+                            icon: 'run'
+                        MDIcon:
+                            icon: 'car'
+                        MDIcon:
+                            icon: 'helicopter'
+                        MDIcon:
+                            icon: 'tank'
+                        MDIcon:
+                            icon: 'dog'
+
+                    BoxLayout:
+                        size_hint_y: None
+                        height: 40
+                        MDLabel:
+                            text: "OBJECT :- "
+                            halign: "center"
+                            font_size: 30
+                            font_name: os.path.join('assets', 'fonts', 'Coburn.ttf')
+                            opposite_colors: True
+
+
+                        MDLabel:
+                            text: "drone"
+                            halign: "center"
+                            font_size: 30
+                            font_name: os.path.join('assets', 'fonts', 'golden.ttf')
+                            opposite_colors: True
+
+
+                    BoxLayout:
+                        size_hint_y: None
+                        height: dp(80)
+                        MDLabel:
+                            text: "health"
+                            halign: "center"
+                            font_size: 30
+                            size_hint_x:None
+                            width: 50
+                            font_name: os.path.join('assets', 'fonts', 'Coburn.ttf')
+                            opposite_colors: True
+
+                        MDProgressBar:
+                            id: health_progress_bar
+                            type: "determinate"
+                            value: 50
+                            running_duration: 1
+                            catching_duration: 1.5
+                            color: [1,0.93,0.196,1]
+
+
+
+
+                        
+
+
+
+
+
+        
+
+
+
+            
