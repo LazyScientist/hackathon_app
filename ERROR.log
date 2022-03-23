@@ -1,0 +1,36 @@
+Traceback (most recent call last):
+  File "c:\Users\user\Desktop\hackathon_appss\hackathon_app\main.py", line 28, in <module>
+    Demo_App().run()
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy\app.py", line 950, in run
+    runTouchApp()
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy\base.py", line 582, in runTouchApp
+    EventLoop.mainloop()
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy\base.py", line 347, in mainloop
+    self.idle()
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy\base.py", line 387, in idle
+    Clock.tick()
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy\clock.py", line 733, in tick
+    self.post_idle(ts, self.idle())
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy\clock.py", line 776, in post_idle
+    self._process_events()
+  File "kivy\_clock.pyx", line 616, in kivy._clock.CyClockBase._process_events
+  File "kivy\_clock.pyx", line 649, in kivy._clock.CyClockBase._process_events
+  File "kivy\_clock.pyx", line 645, in kivy._clock.CyClockBase._process_events
+  File "kivy\_clock.pyx", line 218, in kivy._clock.ClockEvent.tick
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy_garden\mapview\downloader.py", line 115, in _check_executor
+    callback(*args)
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy_garden\mapview\view.py", line 122, in set_source
+    self.source = cache_fn
+  File "kivy\graphics\instructions.pyx", line 366, in kivy.graphics.instructions.VertexInstruction.source.__set__
+  File "kivy\graphics\context_instructions.pyx", line 430, in kivy.graphics.context_instructions.BindTexture.source.__set__
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy\core\image\__init__.py", line 561, in __init__
+    self.filename = arg
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy\core\image\__init__.py", line 754, in _set_filename
+    image = ImageLoader.load(
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy\core\image\__init__.py", line 460, in load
+    im = loader(filename, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy\core\image\__init__.py", line 223, in __init__
+    self._data = self.load(filename)
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy\core\image\img_sdl2.py", line 47, in load
+    raise Exception('SDL2: Unable to load image')
+Exception: SDL2: Unable to load image

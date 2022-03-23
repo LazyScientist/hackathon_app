@@ -1,4 +1,6 @@
 #: import os os
+#:import MapSource kivy_garden.mapview.MapSource
+
 
 
 <HomeScreen>
@@ -119,9 +121,9 @@
 
                 MDBoxLayout:
                     size_hint_y: None
-                    height: dp(800)
+                    height: self.minimum_height
                     spacing: dp(20)
-                    padding: dp(10)
+                    padding: dp(40)
                     md_bg_color: app.theme_cls.primary_color
                     orientation: "vertical"
 
@@ -132,7 +134,7 @@
                         height: self.width/2
                         elevation: 20
                         Video:
-                            source: "path_to_video"
+                            source: os.path.join('assets','images','demo.mp4')
 
                     MDRaisedButton:
                         text: "Capture photo"
@@ -157,6 +159,73 @@
                         MDIcon:
                             icon: 'dog'
 
+
+                    BoxLayout:
+                        size_hint_y: None
+                        height: dp(50)
+                        MDIcon:
+                            icon: 'heart'
+                            color: [1,0.93,0.196,1]
+                            size_hint_x: None
+                            width: 30
+                        MDLabel:
+                            text: str(health_progress_bar.value) + "%"
+                            size_hint_x: None
+                            width: 30
+                            color: [1,0.93,0.196,1]
+                        MDProgressBar:
+                            id: health_progress_bar
+                            type: "determinate"
+                            value: 50
+                            running_duration: 1
+                            catching_duration: 1.5
+                            color: [1,0.93,0.196,1]
+                            
+                    BoxLayout:
+                        size_hint_y: None
+                        height: dp(50)
+                        MDIcon:
+                            icon: 'battery-charging'
+                            color: [1,0.93,0.196,1]
+                            size_hint_x: None
+                            width: 30
+                        MDLabel:
+                            text: str(battery_progress_bar.value) + "%"
+                            size_hint_x: None
+                            width: 30
+                            color: [1,0.93,0.196,1]
+                        MDProgressBar:
+                            id: battery_progress_bar
+                            type: "determinate"
+                            value: 90
+                            running_duration: 1
+                            catching_duration: 1.5
+                            color: [1,0.93,0.196,1]
+
+
+
+                    MDLabel:
+                        text: 'Maps'
+                        halign: "center"
+                        font_size: 50
+                        font_name: os.path.join('assets', 'fonts', 'Coburn.ttf')
+                        opposite_colors: True
+
+                        
+                    MDCard:
+                        size_hint_y: None
+                        height: dp(300)
+                        radius: dp(20)
+                        elevation: 20
+                        padding: dp(10)
+                        md_bg_color: [0.6,0.85,0.7,1]
+                        BoxLayout:
+                            id: map_card
+
+                        
+
+
+
                     BoxLayout:
                         size_hint_y: None
                         height: 40
@@ -166,8 +235,6 @@
                             font_size: 30
                             font_name: os.path.join('assets', 'fonts', 'Coburn.ttf')
                             opposite_colors: True
-
-
                         MDLabel:
                             text: "drone"
                             halign: "center"
@@ -178,26 +245,19 @@
 
                     BoxLayout:
                         size_hint_y: None
-                        height: dp(80)
+                        height: 40
                         MDLabel:
-                            text: "health"
+                            text: "altitude :- "
                             halign: "center"
                             font_size: 30
-                            size_hint_x:None
-                            width: 50
                             font_name: os.path.join('assets', 'fonts', 'Coburn.ttf')
                             opposite_colors: True
-
-                        MDProgressBar:
-                            id: health_progress_bar
-                            type: "determinate"
-                            value: 50
-                            running_duration: 1
-                            catching_duration: 1.5
-                            color: [1,0.93,0.196,1]
-
-
-
+                        MDLabel:
+                            text: "1.5km"
+                            halign: "center"
+                            font_size: 30
+                            font_name: os.path.join('assets', 'fonts', 'Coburn.ttf')
+                            opposite_colors: True
 
                         
 
