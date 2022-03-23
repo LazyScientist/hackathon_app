@@ -13,7 +13,7 @@ package.domain = org.pankaj_jangir_SCIENTIST
 source.dir = .
 
 # (list) Source files to include (let empty to include all the files)
-source.include_exts = py,kv,png,jpg,jpeg,atlas,ttf,json
+source.include_exts = py,kv,png,jpg,jpeg,atlas,ttf,json,jpeg
 
 # (list) List of inclusions using pattern matching
 #source.include_patterns = assets/*,images/*.png
@@ -46,10 +46,10 @@ requirements = python3,kivy==2.0.0,https://github.com/kivymd/KivyMD/archive/mast
 #garden_requirements =
 
 # (str) Presplash of the application
-presplash.filename = %(source.dir)s/assets/icons/splash_screen.png
+presplash.filename = %(source.dir)s/assets/icons/splash_screen.jpeg
 
 # (str) Icon of the application
-icon.filename = %(source.dir)s/assets/icons/my_icon.png
+icon.filename = %(source.dir)s/assets/icons/my_icon1.jpeg
 
 # (str) Supported orientation (one of landscape, sensorLandscape, portrait or all)
 orientation = portrait

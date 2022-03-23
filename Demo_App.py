@@ -36,7 +36,7 @@ class Demo_App(MDApp):  # NOQA: N801
     def __init__(self, **kwargs):
         super(Demo_App, self).__init__(**kwargs)
         Window.soft_input_mode = "below_target"
-        self.icon= os.path.join('assets','icons','my_icon.png')
+        self.icon= os.path.join('assets','icons','my_icon1.jpeg')
         self.title = "Monarch drone"
 
         self.theme_cls.primary_palette = "DeepOrange"
