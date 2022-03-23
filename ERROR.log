@@ -1,4 +1,10 @@
 Traceback (most recent call last):
+  File "kivy\properties.pyx", line 861, in kivy.properties.ObservableDict.__getattr__
+KeyError: 'Video'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
   File "c:\Users\user\Desktop\hackathon_appss\hackathon_app\main.py", line 28, in <module>
     Demo_App().run()
   File "C:\Users\user\anaconda3\lib\site-packages\kivy\app.py", line 950, in run
@@ -7,16 +13,66 @@ Traceback (most recent call last):
     EventLoop.mainloop()
   File "C:\Users\user\anaconda3\lib\site-packages\kivy\base.py", line 347, in mainloop
     self.idle()
-  File "C:\Users\user\anaconda3\lib\site-packages\kivy\base.py", line 399, in idle
-    Clock.tick_draw()
-  File "C:\Users\user\anaconda3\lib\site-packages\kivy\clock.py", line 783, in tick_draw
-    self._process_events_before_frame()
-  File "kivy\_clock.pyx", line 658, in kivy._clock.CyClockBase._process_events_before_frame
-  File "kivy\_clock.pyx", line 701, in kivy._clock.CyClockBase._process_events_before_frame
-  File "kivy\_clock.pyx", line 697, in kivy._clock.CyClockBase._process_events_before_frame
-  File "kivy\_clock.pyx", line 218, in kivy._clock.ClockEvent.tick
-  File "C:\Users\user\anaconda3\lib\site-packages\kivy\uix\video.py", line 191, in _do_video_load
-    self._video.play()
-  File "C:\Users\user\anaconda3\lib\site-packages\kivy\core\video\video_gstplayer.py", line 94, in play
-    self.player.set_volume(self.volume)
-AttributeError: 'NoneType' object has no attribute 'set_volume'
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy\base.py", line 391, in idle
+    self.dispatch_input()
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy\base.py", line 342, in dispatch_input
+    post_dispatch_input(*pop(0))
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy\base.py", line 248, in post_dispatch_input
+    listener.dispatch('on_motion', etype, me)
+  File "kivy\_event.pyx", line 709, in kivy._event.EventDispatcher.dispatch
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy\core\window\__init__.py", line 1416, in on_motion
+    self.dispatch('on_touch_up', me)
+  File "kivy\_event.pyx", line 709, in kivy._event.EventDispatcher.dispatch
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy\core\window\__init__.py", line 1452, in on_touch_up
+    if w.dispatch('on_touch_up', touch):
+  File "kivy\_event.pyx", line 709, in kivy._event.EventDispatcher.dispatch
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy\uix\screenmanager.py", line 1208, in on_touch_up
+    return super(ScreenManager, self).on_touch_up(touch)
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy\uix\widget.py", line 567, in on_touch_up
+    if child.dispatch('on_touch_up', touch):
+  File "kivy\_event.pyx", line 709, in kivy._event.EventDispatcher.dispatch
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy\uix\relativelayout.py", line 313, in on_touch_up
+    ret = super(RelativeLayout, self).on_touch_up(touch)
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy\uix\widget.py", line 567, in on_touch_up
+    if child.dispatch('on_touch_up', touch):
+  File "kivy\_event.pyx", line 709, in kivy._event.EventDispatcher.dispatch
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy\uix\widget.py", line 567, in on_touch_up
+    if child.dispatch('on_touch_up', touch):
+  File "kivy\_event.pyx", line 709, in kivy._event.EventDispatcher.dispatch
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy\uix\scrollview.py", line 950, in on_touch_up
+    if self.dispatch('on_scroll_stop', touch):
+  File "kivy\_event.pyx", line 709, in kivy._event.EventDispatcher.dispatch
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy\uix\scrollview.py", line 989, in on_scroll_stop
+    self.simulate_touch_down(touch)
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy\uix\scrollview.py", line 668, in simulate_touch_down
+    ret = super(ScrollView, self).on_touch_down(touch)
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy\uix\widget.py", line 545, in on_touch_down
+    if child.dispatch('on_touch_down', touch):
+  File "kivy\_event.pyx", line 709, in kivy._event.EventDispatcher.dispatch
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy\uix\widget.py", line 545, in on_touch_down
+    if child.dispatch('on_touch_down', touch):
+  File "kivy\_event.pyx", line 709, in kivy._event.EventDispatcher.dispatch
+  File "C:\Users\user\anaconda3\lib\site-packages\kivymd\uix\behaviors\ripple_behavior.py", line 255, in on_touch_down
+    super().on_touch_down(touch)
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy\uix\behaviors\button.py", line 138, in on_touch_down
+    if super(ButtonBehavior, self).on_touch_down(touch):
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy\uix\widget.py", line 545, in on_touch_down
+    if child.dispatch('on_touch_down', touch):
+  File "kivy\_event.pyx", line 709, in kivy._event.EventDispatcher.dispatch
+  File "C:\Users\user\anaconda3\lib\site-packages\kivymd\uix\button.py", line 1477, in on_touch_down
+    super(MDFloatingActionButton, self).on_touch_down(touch)
+  File "C:\Users\user\anaconda3\lib\site-packages\kivymd\uix\behaviors\ripple_behavior.py", line 255, in on_touch_down
+    super().on_touch_down(touch)
+  File "C:\Users\user\anaconda3\lib\site-packages\kivymd\uix\button.py", line 969, in on_touch_down
+    return super().on_touch_down(touch)
+  File "C:\Users\user\anaconda3\lib\site-packages\kivymd\uix\button.py", line 1092, in on_touch_down
+    return super().on_touch_down(touch)
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy\uix\behaviors\button.py", line 151, in on_touch_down
+    self.dispatch('on_press')
+  File "kivy\_event.pyx", line 705, in kivy._event.EventDispatcher.dispatch
+  File "kivy\_event.pyx", line 1248, in kivy._event.EventObservers.dispatch
+  File "kivy\_event.pyx", line 1172, in kivy._event.EventObservers._dispatch
+  File "c:\Users\user\Desktop\hackathon_appss\hackathon_app\libs\uix\baseclass\home_screen.py", line 54, in button_layout1
+    self.info_layout.ids.Video.source = os.path.join('assets','images','demo2.mp4')
+  File "kivy\properties.pyx", line 864, in kivy.properties.ObservableDict.__getattr__
+AttributeError: 'super' object has no attribute '__getattr__'

@@ -34,7 +34,7 @@ class HomeScreen(MDScreen):
         def ddd(b):
             self.ids.scroll_box.remove_widget(self.list_box)
             self.ids.scroll_box.add_widget(self.info_layout)
-        for i in range(0,10):
+        for i in range(1,28):
             listss= Factory.listitemss()
             listss.ids.txt.text = str(i)+"/12/2022"
             listss.ids.btn.bind(on_press=ddd)
@@ -51,7 +51,8 @@ class HomeScreen(MDScreen):
             btn.icon = 'arrow-left'
             self.ids.scroll_box.remove_widget(self.home_layout2)
             self.ids.scroll_box.remove_widget(self.home_layout3)
-            self.info_layout.ids.Video.source = os.path.join('assets','images','demo2.mp4')
+            self.info_layout.ids.video.source = os.path.join('assets','images','demo.mp4')
+            self.info_layout.ids.video.state = 'play'
             self.ids.scroll_box.add_widget(self.info_layout)
             self.md_bg_color = self.home_layout1.ids.btn.md_bg_color
 
@@ -70,6 +71,8 @@ class HomeScreen(MDScreen):
             btn.icon = 'arrow-left'
             self.ids.scroll_box.remove_widget(self.home_layout1)
             self.ids.scroll_box.remove_widget(self.home_layout3)
+            self.info_layout.ids.video.source = os.path.join('assets','images','demo2.mp4')
+            self.info_layout.ids.video.state = 'play'
             self.ids.scroll_box.add_widget(self.list_box)
             self.md_bg_color =  self.home_layout1.ids.btn.md_bg_color
 
@@ -96,6 +99,8 @@ class HomeScreen(MDScreen):
             btn.icon = 'arrow-left'
             self.ids.scroll_box.remove_widget(self.home_layout2)
             self.ids.scroll_box.remove_widget(self.home_layout1)
+            self.info_layout.ids.video.source = os.path.join('assets','images','demo3.mp4')
+            self.info_layout.ids.video.state = 'play'
             self.ids.scroll_box.add_widget(self.info_layout)
             self.md_bg_color =  self.home_layout1.ids.btn.md_bg_color
             notification.notify(title = 'monarch drone', message = 'unwanted object detacted')
