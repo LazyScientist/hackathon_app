@@ -5,6 +5,7 @@
 
 <HomeScreen>:
 
+
     MDBoxLayout:
         orientation: "vertical"
 
@@ -15,15 +16,16 @@
             MDBoxLayout:
                 size_hint_y: None
                 height: self.minimum_height
-                # start your code from here
                 orientation: "vertical"
                 spacing: 20
                 padding: 20
+                id: scroll_box
 
 
 <home_element1@MDCard>:
     size_hint_y: None
     orientation: "vertical"
+    elevation: 30
     height: dp(300)
     radius: dp(20)
     padding: dp(10)
@@ -38,7 +40,8 @@
         height: dp(200)
         source: os.path.join('assets','images','drone1.png')
     MDFloatingActionButton:
-        icon: "android"
+        id: btn
+        icon: "arrow-right"
         md_bg_color: app.theme_cls.primary_color
 
                     
@@ -47,6 +50,7 @@
                 
                 
 <home_element2@MDCard>:
+    elevation: 30
     size_hint_y: None
     height: dp(300)
     radius: dp(20)
@@ -64,7 +68,8 @@
         height: dp(200)
         source: os.path.join('assets','images','militray.png')
     MDRoundFlatIconButton:
-        icon: "android"
+        id: btn
+        icon: "arrow-right"
         text: "view Data"
         elevation: 15
         v_align: "center"
@@ -77,6 +82,7 @@
 
 
 <home_element3@MDCard>:
+    elevation: 30
     size_hint_y: None
     height: dp(400)
     radius: dp(20)
@@ -112,6 +118,7 @@
         
 
     MDFloatingActionButton:
+        id: btn
         icon: "arrow-right"
         md_bg_color: app.theme_cls.primary_color
 
@@ -124,17 +131,20 @@
     height: self.minimum_height
     spacing: dp(20)
     padding: dp(40)
-    md_bg_color: app.theme_cls.primary_color
     orientation: "vertical"
 
 
     MDCard:
+        id: video_box
         radius: dp(20)
         size_hint_y: None
         height: self.width/2
         elevation: 20
         Video:
+            id: video
             source: os.path.join('assets','images','demo.mp4')
+            state: "play"
+            loop: True
 
     MDRaisedButton:
         text: "Capture photo"
@@ -258,3 +268,32 @@
             font_size: 30
             font_name: os.path.join('assets', 'fonts', 'Coburn.ttf')
             opposite_colors: True
+
+
+
+<listitemss@MDCard>:
+    size_hint_y: None
+    height: dp(100)
+    spacing: dp(20)
+    radius: dp(20)
+    padding: dp(40)
+
+    MDLabel:
+        id: txt
+        text: "Date : 12/11/2022"
+        font_size: 30
+        opposite_colors: True
+
+
+    MDFloatingActionButton:
+        id: btn
+        icon: "arrow-right"
+        md_bg_color: app.theme_cls.primary_color
+
+
+
+<list_box_container@BoxLayout>:
+    size_hint_y: None
+    height: self.minimum_height
+    orientation: "vertical"
+    spacing: dp(20)

@@ -7,30 +7,16 @@ Traceback (most recent call last):
     EventLoop.mainloop()
   File "C:\Users\user\anaconda3\lib\site-packages\kivy\base.py", line 347, in mainloop
     self.idle()
-  File "C:\Users\user\anaconda3\lib\site-packages\kivy\base.py", line 387, in idle
-    Clock.tick()
-  File "C:\Users\user\anaconda3\lib\site-packages\kivy\clock.py", line 733, in tick
-    self.post_idle(ts, self.idle())
-  File "C:\Users\user\anaconda3\lib\site-packages\kivy\clock.py", line 776, in post_idle
-    self._process_events()
-  File "kivy\_clock.pyx", line 616, in kivy._clock.CyClockBase._process_events
-  File "kivy\_clock.pyx", line 649, in kivy._clock.CyClockBase._process_events
-  File "kivy\_clock.pyx", line 645, in kivy._clock.CyClockBase._process_events
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy\base.py", line 399, in idle
+    Clock.tick_draw()
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy\clock.py", line 783, in tick_draw
+    self._process_events_before_frame()
+  File "kivy\_clock.pyx", line 658, in kivy._clock.CyClockBase._process_events_before_frame
+  File "kivy\_clock.pyx", line 701, in kivy._clock.CyClockBase._process_events_before_frame
+  File "kivy\_clock.pyx", line 697, in kivy._clock.CyClockBase._process_events_before_frame
   File "kivy\_clock.pyx", line 218, in kivy._clock.ClockEvent.tick
-  File "C:\Users\user\anaconda3\lib\site-packages\kivy_garden\mapview\downloader.py", line 115, in _check_executor
-    callback(*args)
-  File "C:\Users\user\anaconda3\lib\site-packages\kivy_garden\mapview\view.py", line 122, in set_source
-    self.source = cache_fn
-  File "kivy\graphics\instructions.pyx", line 366, in kivy.graphics.instructions.VertexInstruction.source.__set__
-  File "kivy\graphics\context_instructions.pyx", line 430, in kivy.graphics.context_instructions.BindTexture.source.__set__
-  File "C:\Users\user\anaconda3\lib\site-packages\kivy\core\image\__init__.py", line 561, in __init__
-    self.filename = arg
-  File "C:\Users\user\anaconda3\lib\site-packages\kivy\core\image\__init__.py", line 754, in _set_filename
-    image = ImageLoader.load(
-  File "C:\Users\user\anaconda3\lib\site-packages\kivy\core\image\__init__.py", line 460, in load
-    im = loader(filename, **kwargs)
-  File "C:\Users\user\anaconda3\lib\site-packages\kivy\core\image\__init__.py", line 223, in __init__
-    self._data = self.load(filename)
-  File "C:\Users\user\anaconda3\lib\site-packages\kivy\core\image\img_sdl2.py", line 47, in load
-    raise Exception('SDL2: Unable to load image')
-Exception: SDL2: Unable to load image
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy\uix\video.py", line 191, in _do_video_load
+    self._video.play()
+  File "C:\Users\user\anaconda3\lib\site-packages\kivy\core\video\video_gstplayer.py", line 94, in play
+    self.player.set_volume(self.volume)
+AttributeError: 'NoneType' object has no attribute 'set_volume'
